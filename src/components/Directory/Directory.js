@@ -26,14 +26,14 @@ export default class Directory extends Component {
         linkUrl: "shop/sneakers"
       },
       {
-        title: "womens",
+        title: "women's",
         imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
         id: 4,
         size: "large",
         linkUrl: "shop/womens"
       },
       {
-        title: "mens",
+        title: "men's",
         imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
         id: 5,
         size: "large",
