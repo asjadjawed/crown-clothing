@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./SignIn.scss";
 
 import FormInput from "../FormInput/FormInput";
+import CustomButton from "../CustomButton/CustomButton";
 
 export class SignIn extends Component {
   state = {
@@ -45,7 +46,7 @@ export class SignIn extends Component {
             required
           ></FormInput>
 
-          <input type="submit" value="Submit Form"></input>
+          <CustomButton type="submit">Sign In</CustomButton>
         </form>
       </div>
     );
