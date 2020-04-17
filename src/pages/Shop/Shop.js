@@ -5,7 +5,7 @@ import CollectionPreview from "../../components/CollectionPreview/CollectionPrev
 
 export default class Shop extends Component {
   state = {
-    collection: ShopData
+    collection: ShopData,
   };
 
   render() {
@@ -13,7 +13,7 @@ export default class Shop extends Component {
     return (
       <div className="shop-page">
         {collection.map(({ id, ...otherProps }) => (
-          <CollectionPreview id={id} {...otherProps}></CollectionPreview>
+          <CollectionPreview key={id} {...otherProps}></CollectionPreview>
         ))}
       </div>
     );
