@@ -35,6 +35,7 @@ const Header = ({ currentUser }) => {
   );
 };
 
+// the return object get passed as props to this component
 const mapStateToProps = (state) => ({
   // state is the root reducer state value
   currentUser: state.user.currentUser,
