@@ -9,7 +9,7 @@ import CartDropDown from "../CartDropDown/CartDropDown";
 
 import "./Header.scss";
 
-const Header = ({ currentUser }) => {
+const Header = ({ currentUser, hidden }) => {
   console.log(currentUser);
   return (
     <div className="header">
@@ -34,15 +34,16 @@ const Header = ({ currentUser }) => {
         )}
         <CartIcon></CartIcon>
       </div>
-      <CartDropDown></CartDropDown>
+      {hidden ? null : <CartDropDown></CartDropDown>}
     </div>
   );
 };
 
 // the return object get passed as props to this component
-const mapStateToProps = (state) => ({
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
   // state is the root reducer state value
-  currentUser: state.user.currentUser,
+  currentUser,
+  hidden,
 });
 
 export default connect(mapStateToProps)(Header);
