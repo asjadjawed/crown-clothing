@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import "./App.scss";
 
 import { setCurrentUser } from "./redux/user/user.actions";
+import { selectCurrentUser } from "./redux/user/user.selectors";
 
 import Header from "./components/Header/Header";
 import Homepage from "./pages/Homepage/Homepage";
@@ -53,8 +54,8 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = (state) => ({
+  currentUser: selectCurrentUser(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
