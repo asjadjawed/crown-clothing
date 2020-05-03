@@ -12,6 +12,7 @@ import Header from "./components/Header/Header";
 import Homepage from "./pages/Homepage/Homepage";
 import Shop from "./pages/Shop/Shop";
 import SignInRegister from "./pages/SignInRegister/SignInRegister";
+import Checkout from "./pages/Checkout/Checkout";
 
 class App extends Component {
   unsubscribeFromAuth = null;
@@ -41,6 +42,7 @@ class App extends Component {
         <Switch>
           <Route exact component={Homepage} path="/"></Route>
           <Route exact component={Shop} path="/shop"></Route>
+          <Route exact component={Checkout} path="/checkout"></Route>
           <Route
             exact
             render={() =>
