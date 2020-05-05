@@ -2,6 +2,7 @@ import {
   CART_TOGGLE_HIDDEN,
   CART_ADD_ITEM,
   CART_REMOVE_ITEM,
+  CART_DECREASE_ITEM,
 } from "./cart.types";
 
 export const toggleCartHidden = () => ({
@@ -15,5 +16,10 @@ export const addItem = (item) => ({
 
 export const removeItem = (item) => ({
   type: CART_REMOVE_ITEM,
+  payload: item,
+});
+
+export const decreaseItem = (item) => ({
+  type: CART_DECREASE_ITEM,
   payload: item,
 });
